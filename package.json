@@ -1,0 +1,38 @@
+{
+  "name": "create-account",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "stylelint": "stylelint \"src/scss/**/*.scss\"",
+    "stylelint:fix": "stylelint \"src/scss/**/*.scss\" --fix"
+  },
+  "author": "dreadwood",
+  "devDependencies": {
+    "autoprefixer": "10.4.19",
+    "browser-sync": "3.0.2",
+    "del": "7.1.0",
+    "eslint": "8.57.0",
+    "gulp": "4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-csso": "4.0.1",
+    "gulp-imagemin": "9.0.0",
+    "gulp-order": "1.2.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "10.0.0",
+    "gulp-pug": "5.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "9.0.0",
+    "gulp-uglify-es": "3.0.0",
+    "gulp-webp": "5.0.0",
+    "postcss": "8.4.38",
+    "postcss-scss": "4.0.9",
+    "pug": "3.0.2",
+    "push-dir": "0.4.1",
+    "sass": "1.72.0",
+    "stylelint": "16.3.1",
+    "stylelint-config-standard-scss": "13.0.0",
+    "stylelint-order": "6.0.4"
+  }
+}

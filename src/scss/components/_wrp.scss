@@ -1,0 +1,15 @@
+.wrp {
+  width: 100%;
+  max-width: $container-max;
+  margin: 0 auto;
+  padding-right: $padding;
+  padding-left: $padding;
+  @include breakpoint-lg {
+    padding-right: $padding-lg;
+    padding-left: $padding-lg;
+  }
+  @include breakpoint-xl {
+    padding-right: $padding-xl;
+    padding-left: $padding-xl;
+  }
+}
