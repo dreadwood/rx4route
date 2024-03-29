@@ -1,12 +1,13 @@
 // fonts
-$font-default: "Open Sans", "Helvetica Neue", arial, sans-serif;
+$font-title: "SF Pro Display", -apple-system, "BlinkMacSystemFont", "Roboto", 'Helvetica Neue', "Geneva", sans-serif;
+$font-text: "Lato", sans-serif;
 
 // retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // container
-$container-max: 1140px;
+$container-max: 1908px;
 $container-min: 375px;
 
 // breakpoints

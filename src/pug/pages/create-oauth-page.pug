@@ -1,0 +1,21 @@
+extends ../elements/layout-create-account-page
+include ../elements/images
+include ../components/ca-oauth
+
+block data
+  -
+    title = "Rx4Route: create account — OAuth"
+    step = 1
+    let oAuthProvides = [
+      { name: "Google", icon: "icon-logo-google" },
+      { name: "Apple", icon: "icon-logo-apple" },
+      { name: "Microsoft", icon: "icon-logo-microsoft" },
+      { name: "Github", icon: "icon-logo-github" }
+    ]
+
+
+block content
+  .ca-content
+    .ca-content__title Create Account
+    +ca-oauth({})
+    .ca-content__link-bottom Already have an account? #[a(href="#") Sign in]

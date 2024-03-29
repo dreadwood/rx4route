@@ -1,0 +1,93 @@
+.ca-content {
+  width: 100%;
+  max-width: 584px;
+  font-family: $font-title;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 400;
+  text-align: left;
+  color: $color-text;
+  &--form {
+    max-width: 392px;
+  }
+}
+.ca-content__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: $font-title;
+  font-size: 45px;
+  line-height: 54px;
+  font-weight: 600;
+}
+.ca-content__subtitle {
+  margin-bottom: 24px;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 120%;
+  color: $color-gray-067;
+}
+.ca-content__text {
+  max-width: 370px;
+  margin: 0;
+  font-family: $font-title;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-gray-067;
+}
+.ca-content__btn-back {
+  @include transition(color);
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 4px 16px;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-blue-dark;
+  background-color: transparentize($color-blue-dark, 0.8);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    stroke: currentcolor;
+  }
+  &:hover,
+  &:focus {
+    color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+}
+.ca-content__note {
+  @include transition(color);
+  margin-top: 17px;
+  font-family: $font-text;
+  font-size: 14px;
+  line-height: 130%;
+  color: transparentize($color-black, 0.4);
+  a {
+    color: inherit;
+  }
+  a:hover,
+  a:focus {
+    color: $color-blue-dark;
+  }
+}
+.ca-content__link-bottom {
+  @include transition(color);
+  font-family: $font-title;
+  font-size: 20px;
+  line-height: 24px;
+  a {
+    font-weight: 700;
+    color: $color-blue-dark;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+}

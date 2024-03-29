@@ -1,0 +1,54 @@
+.ca-oauth {
+  margin-bottom: 184px;
+}
+.ca-oauth__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.ca-oauth__btn {
+  @include transition(background-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 16px;
+  margin: 0;
+  padding: 12px 24px;
+  font: inherit;
+  background-color: $color-white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  svg {
+    flex-shrink: 0;
+    width: auto;
+    height: 40px;
+    max-width: 42px;
+  }
+  &:hover,
+  &:focus {
+    background-color: color.adjust($color-white, $blackness: 10%);
+  }
+}
+.ca-oauth__link {
+  @include transition(color);
+  display: block;
+  max-width: max-content;
+  margin: 0;
+  padding: 0;
+  font-family: $font-title;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-blue-dark;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+}
+

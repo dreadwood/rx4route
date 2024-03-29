@@ -1,0 +1,31 @@
+extends ../elements/layout-create-account-page
+include ../elements/images
+include ../components/terms
+include ../components/sing-in
+
+block data
+  -
+    title = "Rx4Route: create account — enter email"
+    step = 1
+
+
+block content
+  .ca-content.ca-content--form
+    .ca-content__title Create Account
+    form.ca-form
+      .ca-form__row
+        input.ca-input(type="text" placeholder="Company Name")
+      .ca-form__row
+        input.ca-input(type="text" placeholder="First Name")
+        input.ca-input(type="text" placeholder="Last Name")
+      .ca-form__row
+        input.ca-input(type="email" placeholder="Email")
+      .ca-form__row
+        input.ca-input(type="password" placeholder="Password")
+        input.ca-input(type="password" placeholder="Confirm")
+      .ca-form__row
+        .ca-form__note Use 8 or more characters with a mix of letters, numbers & symbols
+      .ca-form__submit
+        button.ca-btn(type="submit") Continue
+      +terms({})
+    +sing-in({})

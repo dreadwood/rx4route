@@ -1,0 +1,35 @@
+.ca-verify {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  max-width: max-content;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 120%;
+  color: transparentize($color-gray-067, 0.60);
+  border: none;
+  input {
+    width: 48px;
+    height: 68px;
+    font-family: $font-title;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: $color-text;
+    border: 1px solid transparentize($color-blue-dark, 0.6);
+    border-radius: 12px;
+    &::placeholder {
+      color: transparentize($color-gray-067, 0.60);
+    }
+    &[type="number"]::-webkit-outer-spin-button, // webkit
+    &[type="number"]::-webkit-inner-spin-button {
+      margin: 0;
+      appearance: none;
+    }
+    &[type="number"] { // firefox
+      appearance: textfield;
+    }
+  }
+}

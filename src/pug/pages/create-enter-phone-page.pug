@@ -1,0 +1,28 @@
+extends ../elements/layout-create-account-page
+include ../elements/images
+include ../components/btn-back
+include ../components/terms
+include ../components/sing-in
+
+block data
+  -
+    title = "Rx4Route: create account — enter phone"
+    step = 2
+
+
+block content
+  .ca-content.ca-content--form
+    +btn-back({})
+    .ca-content__title Enter Your Phone Number
+    .ca-content__subtitle Rx4Route is a service for bussinesses. We need your phone number to active your account and to provide you with technical support.
+    form.ca-form
+      .ca-form__row
+        .ca-input-tel
+          .ca-input-tel__flag
+            +svg({name: "icon-flag-us", height: 26, width: 36})
+          .ca-input-tel__code +1
+          input(type="tel" placeholder="965-071")
+      .ca-form__submit
+        button.ca-btn(type="submit") Continue
+      +terms({})
+    +sing-in({})

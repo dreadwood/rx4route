@@ -1,0 +1,44 @@
+.ca-form {
+  width: 100%;
+  margin-bottom: 70px;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 400;
+  text-align: left;
+  color: transparentize($color-gray-067, 0.60);
+}
+.ca-form__row {
+  display: flex;
+  column-gap: 8px;
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+.ca-form__verify {
+  margin-bottom: 24px;
+}
+.ca-form__submit {
+  margin-top: 23px;
+}
+.ca-form__note {
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 120%;
+  color: transparentize($color-gray-067, 0.60);
+}
+.ca-form__link {
+  @include transition(color);
+  margin: 0;
+  margin-top: 16px;
+  padding: 0;
+  font: inherit;
+  color: $color-blue-dark;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+}

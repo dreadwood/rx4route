@@ -1,0 +1,21 @@
+extends ../elements/layout-create-account-page
+include ../elements/images
+include ../components/btn-back
+include ../components/ca-verify
+
+block data
+  -
+    title = "Rx4Route: create account — verify email"
+    step = 1
+
+
+block content
+  .ca-content.ca-content--form
+    +btn-back({})
+    .ca-content__title Verify Your Email
+    .ca-content__subtitle We’ve sent a 6-character verification code to youremail@mail.com. The code expires soon.
+    form.ca-form
+      .ca-form__verify
+        +ca-verify({})
+      .ca-form__note Can’t find your code? Check your spam folder!
+      button.ca-form__link(type="button") Resend verification email

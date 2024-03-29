@@ -1,0 +1,45 @@
+.ca-input-tel {
+  position: relative;
+  width: 100%;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 400;
+  color: $color-text;
+  input {
+    width: 100%;
+    padding: 19px 20px 20px 90px;
+    font: inherit;
+    border: 1px solid transparentize($color-blue-dark, 0.6);
+    border-radius: 12px;
+    &::placeholder {
+      font: inherit;
+      color: transparentize($color-gray-067, 0.60);
+    }
+    &::-webkit-credentials-auto-fill-button { // for hidden key icon in safari
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+}
+.ca-input-tel__flag {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  svg {
+    width: 36px;
+    height: 26px;
+  }
+}
+.ca-input-tel__code {
+  position: absolute;
+  top: 50%;
+  left: 68px;
+  transform: translateY(-50%);
+}
+

@@ -1,0 +1,18 @@
+.ca-btn {
+  @include transition(background-color);
+  width: 100%;
+  margin: 0;
+  padding: 13px 20px;
+  font-family: $font-title;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-white;
+  background-color: $color-blue-dark;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+}

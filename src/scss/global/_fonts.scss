@@ -1,21 +1,32 @@
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Lato";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   src:
-    local("Open Sans"),
-    local("Open-Sans-Regular"),
-    url("/fonts/open-sans-v40-cyrillic_latin-regular.woff2") format("woff2");
+    local("Lato"),
+    local("Lato-Regular"),
+    url("/fonts/lato-v24-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Open Sans";
-  font-weight: 700;
+  font-family: "SF Pro Display";
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
   src:
-    local("Open Sans Bold"),
-    local("Open-Sans-Bold"),
-    url("/fonts/open-sans-v40-cyrillic_latin-700.woff2") format("woff2");
+    local("SFProDisplay"),
+    local("SFProDisplay-Regular"),
+    url("/fonts/SFProDisplay-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("SFProDisplay Semibold"),
+    local("SFProDisplay-Semibold"),
+    url("/fonts/SFProDisplay-Semibold.woff2") format("woff2");
 }

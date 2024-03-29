@@ -1,0 +1,22 @@
+include ../elements/head
+
+-
+  let title = ""
+  let step = 1
+
+block data
+
+doctype html
+html(lang="en")
+  +head({title})
+  body
+    section.ca-page
+      .ca-page__container
+        .ca-page__left
+          a.ca-page__logo(href="#")
+            +svg({name: "icon-logo-rx4route", width: 275, height: 50})
+          h1.ca-page__title Create #[br] Account
+          span Step #{step} of 2
+        .ca-page__right
+          block content
+    include ../elements/script
