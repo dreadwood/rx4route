@@ -1,9 +1,10 @@
-.ca-input {
+.ca-field {
+  @include transition(color, border-color);
   width: 100%;
   padding: 19px 20px 20px 20px;
   font-family: $font-text;
   font-size: 16px;
-  line-height: 120%;
+  line-height: 19px;
   font-weight: 400;
   text-align: left;
   color: $color-text;
@@ -19,5 +20,10 @@
     width: 1px;
     height: 1px;
     opacity: 0;
+  }
+  &.error {
+    color: $color-red;
+    border-color: $color-red;
+    outline: none;
   }
 }

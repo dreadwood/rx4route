@@ -9,14 +9,21 @@
   color: transparentize($color-gray-067, 0.60);
 }
 .ca-form__row {
-  display: flex;
-  column-gap: 8px;
+  .ca-error {
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
   &:not(:first-child) {
     margin-top: 12px;
   }
 }
+.ca-form__cols {
+  display: flex;
+  column-gap: 8px;
+}
 .ca-form__verify {
   margin-bottom: 24px;
+
 }
 .ca-form__submit {
   margin-top: 23px;
@@ -25,6 +32,9 @@
   font-size: 16px;
   line-height: 120%;
   color: transparentize($color-gray-067, 0.60);
+  &.error {
+    color: $color-red;
+  }
 }
 .ca-form__link {
   @include transition(color);

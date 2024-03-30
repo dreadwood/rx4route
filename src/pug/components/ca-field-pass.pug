@@ -1,0 +1,8 @@
+include ../elements/images
+
+mixin ca-field-pass({})
+  fieldset.ca-field-pass
+    input.ca-field(type="password" placeholder="Password")
+    input.ca-field(type="password" placeholder="Confirm")
+    button.ca-field-pass__visible(type="button" aria-label="show password")
+      +svg({ name: "icon-pass-hide", height: 32, width: 32 })

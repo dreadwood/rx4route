@@ -1,0 +1,30 @@
+.ca-field-pass {
+  position: relative;
+  display: flex;
+  column-gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.ca-field-pass__visible {
+  @include transition(color);
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 12px);
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  color: $color-blue-dark;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  svg {
+    fill: currentcolor;
+  }
+  &:hover,
+  &:focus {
+    color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+}

@@ -2,6 +2,7 @@ extends ../elements/layout-create-account-page
 include ../elements/images
 include ../components/terms
 include ../components/sing-in
+include ../components/ca-field-pass
 
 block data
   -
@@ -14,18 +15,20 @@ block content
     .ca-content__title Create Account
     form.ca-form
       .ca-form__row
-        input.ca-input(type="text" placeholder="Company Name")
+        input.ca-field(type="text" placeholder="Company Name")
       .ca-form__row
-        input.ca-input(type="text" placeholder="First Name")
-        input.ca-input(type="text" placeholder="Last Name")
+        .ca-form__cols
+          input.ca-field.error(type="text" placeholder="First Name")
+          input.ca-field(type="text" placeholder="Last Name")
+        .ca-error Enter a First Name
+      .ca-form__row.erorr
+        input.ca-field.error(type="email" placeholder="Email")
+        .ca-error Email is incorrect
       .ca-form__row
-        input.ca-input(type="email" placeholder="Email")
+        +ca-field-pass({})
       .ca-form__row
-        input.ca-input(type="password" placeholder="Password")
-        input.ca-input(type="password" placeholder="Confirm")
-      .ca-form__row
-        .ca-form__note Use 8 or more characters with a mix of letters, numbers & symbols
+        .ca-form__note.error Use 8 or more characters with a mix of letters, numbers & symbols
       .ca-form__submit
-        button.ca-btn(type="submit") Continue
+        button.ca-btn(type="submit" disabled) Continue
       +terms({})
     +sing-in({})

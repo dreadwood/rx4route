@@ -15,4 +15,7 @@
   &:focus {
     background-color: color.adjust($color-blue-dark, $lightness: 20%);
   }
+  &[disabled] {
+    opacity: 0.6;
+  }
 }

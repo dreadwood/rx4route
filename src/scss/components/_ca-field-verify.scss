@@ -1,4 +1,4 @@
-.ca-verify {
+.ca-field-verify {
   display: flex;
   align-items: center;
   column-gap: 8px;
@@ -31,6 +31,11 @@
     }
     &[type="number"] { // firefox
       appearance: textfield;
+    }
+  }
+  &.error {
+    input {
+      border-color: $color-red;
     }
   }
 }

@@ -1,4 +1,4 @@
-.ca-input-tel {
+.ca-field-tel {
   position: relative;
   width: 100%;
   font-family: $font-text;
@@ -26,7 +26,7 @@
     }
   }
 }
-.ca-input-tel__flag {
+.ca-field-tel__flag {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -36,7 +36,7 @@
     height: 26px;
   }
 }
-.ca-input-tel__code {
+.ca-field-tel__code {
   position: absolute;
   top: 50%;
   left: 68px;
