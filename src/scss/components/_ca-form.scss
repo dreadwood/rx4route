@@ -22,7 +22,6 @@
   margin-top: 23px;
 }
 .ca-form__note {
-  font-family: $font-text;
   font-size: 16px;
   line-height: 120%;
   color: transparentize($color-gray-067, 0.60);
@@ -33,6 +32,10 @@
   margin-top: 16px;
   padding: 0;
   font: inherit;
+  font-family: $font-text;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
   color: $color-blue-dark;
   background-color: transparent;
   border: none;

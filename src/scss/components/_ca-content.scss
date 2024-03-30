@@ -1,7 +1,7 @@
 .ca-content {
   width: 100%;
   max-width: 584px;
-  font-family: $font-title;
+  font-family: $font-text;
   font-size: 16px;
   line-height: 120%;
   font-weight: 400;
@@ -14,14 +14,12 @@
 .ca-content__title {
   margin-top: 0;
   margin-bottom: 24px;
-  font-family: $font-title;
   font-size: 45px;
   line-height: 54px;
   font-weight: 600;
 }
 .ca-content__subtitle {
   margin-bottom: 24px;
-  font-family: $font-text;
   font-size: 16px;
   line-height: 120%;
   color: $color-gray-067;
@@ -29,7 +27,6 @@
 .ca-content__text {
   max-width: 370px;
   margin: 0;
-  font-family: $font-title;
   font-size: 16px;
   line-height: 140%;
   color: $color-gray-067;
@@ -64,7 +61,6 @@
 .ca-content__note {
   @include transition(color);
   margin-top: 17px;
-  font-family: $font-text;
   font-size: 14px;
   line-height: 130%;
   color: transparentize($color-black, 0.4);
@@ -78,7 +74,6 @@
 }
 .ca-content__link-bottom {
   @include transition(color);
-  font-family: $font-title;
   font-size: 20px;
   line-height: 24px;
   a {

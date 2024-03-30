@@ -1,32 +1,21 @@
 @font-face {
-  font-family: "Lato";
+  font-family: "Poppins";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   src:
-    local("Lato"),
-    local("Lato-Regular"),
-    url("/fonts/lato-v24-latin-regular.woff2") format("woff2");
+    local("Poppins"),
+    local("Poppins-Regular"),
+    url("/fonts/poppins-v20-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "SF Pro Display";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src:
-    local("SFProDisplay"),
-    local("SFProDisplay-Regular"),
-    url("/fonts/SFProDisplay-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "SF Pro Display";
+  font-family: "Poppins";
   font-weight: 600;
   font-style: normal;
   font-display: swap;
   src:
-    local("SFProDisplay Semibold"),
-    local("SFProDisplay-Semibold"),
-    url("/fonts/SFProDisplay-Semibold.woff2") format("woff2");
+    local("Poppins"),
+    local("Poppins-Semibold"),
+    url("/fonts/poppins-v20-latin-600.woff2") format("woff2");
 }

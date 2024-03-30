@@ -5,6 +5,7 @@
   max-width: max-content;
   margin: 0;
   padding: 0;
+  font-family: $font-text;
   font-size: 16px;
   line-height: 120%;
   color: transparentize($color-gray-067, 0.60);
@@ -12,12 +13,12 @@
   input {
     width: 48px;
     height: 68px;
-    font-family: $font-title;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400;
+    font-family: inherit;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
     text-align: center;
-    color: $color-text;
+    color: $color-gray-067;
     border: 1px solid transparentize($color-blue-dark, 0.6);
     border-radius: 12px;
     &::placeholder {
