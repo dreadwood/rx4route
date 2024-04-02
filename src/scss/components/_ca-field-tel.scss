@@ -3,12 +3,12 @@
   width: 100%;
   font-family: $font-text;
   font-size: 16px;
-  line-height: 120%;
+  line-height: 19px;
   font-weight: 400;
   color: $color-text;
   input {
     width: 100%;
-    padding: 19px 20px 20px 90px;
+    padding: 19px 20px 19px 90px;
     font: inherit;
     border: 1px solid transparentize($color-blue-dark, 0.6);
     border-radius: 12px;
@@ -39,7 +39,10 @@
 .ca-field-tel__code {
   position: absolute;
   top: 50%;
+  top: 0;
   left: 68px;
-  transform: translateY(-50%);
+  left: 0;
+  padding: 20px 20px 20px 68px;
+  // transform: translateY(-50%);
 }
 
