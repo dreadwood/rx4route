@@ -64,7 +64,7 @@ const images = () => {
 
 const webp = () => {
   return gulp
-    .src('src/img/*.{png,jpg.jpeg}')
+    .src('src/img/*.{png,jpg,jpeg}')
     .pipe(gulpWebp({ quality: 80 }))
     .pipe(gulp.dest('dist/img'))
 }
