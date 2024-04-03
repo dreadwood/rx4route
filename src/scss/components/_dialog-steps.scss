@@ -22,32 +22,16 @@
   &:not(:first-child) {
     margin-top: 24px;
   }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: calc(100% + 12px);
+}
+.dialog-steps__icon {
+  position: absolute;
+  top: 2px;
+  right: calc(100% + 12px);
+  display: block;
+  width: 20px;
+  height: 20px;
+  svg {
     display: block;
-    width: 20px;
-    height: 20px;
-    border: 1px dotted $color-blue-dark;
-    border-radius: 50%;
-  }
-  &.done {
-    &::before {
-      border-style: solid;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 3px;
-      right: calc(100% + 15px);
-      display: block;
-      width: 14px;
-      height: 14px;
-      background-color: $color-blue-dark;
-      border-radius: 50%;
-    }
   }
 }
 .dialog-steps__name {

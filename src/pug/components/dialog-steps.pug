@@ -3,7 +3,9 @@ mixin dialog-steps({ content, openSteps })
     h1.dialog-steps__title Get Started with #[br] These Simple Steps:
     each it, i in content
       - const show = openSteps - 1 || 0
-      .dialog-steps__item(class=(i <= show - 1 ? 'done' : null))
+      .dialog-steps__item
+        .dialog-steps__icon
+          +svg({ name: (i <= show - 1 ? "icon-point-done" : "icon-point-empty"), width: 20, height: 20 })
         .dialog-steps__name=it.name
         if (i === show)
           .dialog-steps__text=it.text
