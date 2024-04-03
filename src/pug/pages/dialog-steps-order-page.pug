@@ -1,0 +1,12 @@
+extends ../elements/layout-dialog
+include ../elements/images
+include ../components/dialog-steps
+
+block data
+  -
+    title = "Rx4Route: dialog steps — order"
+
+
+block content
+  +dialog-steps({ content: contentSteps, openSteps: 1 })
+  button.dialog-page__btn-bottom Watch later

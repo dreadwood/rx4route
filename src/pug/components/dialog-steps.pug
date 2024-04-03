@@ -1,0 +1,12 @@
+mixin dialog-steps({ content, openSteps })
+  section.dialog-steps
+    h1.dialog-steps__title Get Started with #[br] These Simple Steps:
+    each it, i in content
+      - const show = openSteps - 1 || 0
+      .dialog-steps__item(class=(i <= show - 1 ? 'done' : null))
+        .dialog-steps__name=it.name
+        if (i === show)
+          .dialog-steps__text=it.text
+          .dialog-steps__img
+            img(src="/img/placeholder.jpg" width="633" height="337" alt="")
+          button.btn.dialog-steps__btn-item Go to execution

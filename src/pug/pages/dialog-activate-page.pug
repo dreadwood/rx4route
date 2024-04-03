@@ -1,0 +1,44 @@
+extends ../elements/layout-dialog
+include ../elements/images
+include ../components/ca-field-select
+include ../components/ca-field
+
+block data
+  -
+    title = "Rx4Route: dialog successfully"
+    const monthOptions = new Array(12).fill(null).map((_, i) => i + 1)
+    const yearOptions = new Array(35).fill(null).map((_, i) => 2024 - 18 - i)
+
+
+block content
+  .dialog-page__title Activate Your RouteRx Trial: Simply Link Your Card
+  section.dialog-actv
+    .dialog-actv__content
+      .dialog-actv__top
+        .dialog-actv__line
+          span You are subscribing to:
+          b GrowthRx
+        .dialog-actv__line
+          span You will be paying:
+          .dialog-actv__price
+            .dialog-actv__price-item #[b $450] /month
+            .dialog-actv__price-extra Plus ¢80 per delivery
+      .dialog-actv__center Your trial of RouteRx will expire in 30 days. Your first payment of $450 is scheduled for #[b 04/30/2024].
+      .dialog-actv__bottom
+        b Enjoy 30 Days On Us: #[br]
+        | Your RouteRx subscription begins with a 30-day complimentary period. Should you choose to continue, the subscription will automatically renew at $450/month on 04/30/2024. #[br]
+        | Manage or cancel your plan anytime in your profile.
+    .dialog-actv__form
+      .dialog-actv__form-el
+        +ca-field({ placeholder: "Receipt Email Address", type: "email" })
+      .dialog-actv__form-el
+        +ca-field({ placeholder: "Name on the card" })
+      .dialog-actv__form-el
+        +ca-field({ placeholder: "Card number" })
+      .dialog-actv__form-el-cols
+        +ca-field-select({ placeholder: "MM", options: monthOptions })
+        +ca-field-select({ placeholder: "YY", options: yearOptions })
+        input.ca-field(type="number" placeholder="CVV")
+      .dialog-actv__form-submit
+        .btn Link card
+      .dialog-actv__form-note By clicking “Link card”, you agree to #[a(href="#") the Terms & Conditions].

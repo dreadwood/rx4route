@@ -4,7 +4,7 @@ block data
   -
     title = "Rx4Route: create account"
 
-    let pages = [
+    let createPages = [
       { name: "Create: oauth", url: "create-oauth-page.html" },
       { name: "Create: enter email", url: "create-enter-email-page.html" },
       { name: "Create: verify email", url: "create-verify-email-page.html" },
@@ -12,6 +12,22 @@ block data
       { name: "Create: verify phone", url: "create-verify-phone-page.html" },
       { name: "Create: success", url: "create-success-page.html" },
       { name: "UI", url: "ui-page.html" },
+    ]
+
+    let dialogPages = [
+      { name: "Dialog activate", url: "dialog-activate-page.html" },
+      { name: "Dialog successfully", url: "dialog-successfully-page.html" },
+      { name: "Dialog steps: order", url: "dialog-steps-order-page.html" },
+      { name: "Dialog steps: route", url: "dialog-steps-route-page.html" },
+      { name: "Dialog steps: account", url: "dialog-steps-account-page.html" },
+      { name: "Dialog steps: driver", url: "dialog-steps-driver-page.html" },
+      { name: "Dialog steps: app", url: "dialog-steps-app-page.html" },
+      { name: "Dialog steps: complete", url: "dialog-steps-complete-page.html" },
+    ]
+
+    let accountPages = [
+      { name: "Account: plan month", url: "account-plan-month-page.html" },
+      { name: "Account: plan year", url: "account-plan-year-page.html" },
     ]
 
 
@@ -39,7 +55,8 @@ block content
     }
     ul,
     ol {
-      margin-top: 0;
+      margin-top: 20px;
+      margin-bottom: 0;
     }
     li {
       margin-bottom: 10px;
@@ -59,4 +76,6 @@ block content
   h1=title
 
   h2 Pages
-  +page-list({list: pages})
+  +page-list({list: createPages})
+  +page-list({list: dialogPages})
+  +page-list({list: accountPages})

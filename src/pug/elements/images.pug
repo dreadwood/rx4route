@@ -1,5 +1,5 @@
 //- simple raster image
-mixin picture({image, width, height, altText, className})
+mixin picture({ image, width, height, altText, className })
   - const path = image.split("@")[0];
   - const format = image.split(".")[1];
   picture
@@ -14,7 +14,7 @@ mixin picture({image, width, height, altText, className})
     )
 
 //- simple vector image
-mixin svg({name, width, height, className})
+mixin svg({ name, width, height, className })
   if name.includes('/img')
     img(class=(className || null) src=name width=width height=height alt="")
   else

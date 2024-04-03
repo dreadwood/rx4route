@@ -1,0 +1,55 @@
+.dialog-page {
+  height: 100%;
+  overflow: scroll;
+  background-color: $color-blue-light;
+}
+.dialog-page__container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: $container-max;
+  min-width: 1024px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+.dialog-pagee__logo {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  svg {
+    display: block;
+  }
+}
+.dialog-page__title {
+  max-width: 580px;
+  margin: 0 auto 32px auto;
+  font-size: 36px;
+  line-height: 120%;
+  font-weight: 600;
+  text-align: center;
+}
+.dialog-page__btn-bottom {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 24px auto 0 auto;
+  padding: 15px 32px;
+  font-family: $font-text;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-blue-dark;
+  text-decoration: none;
+  background-color: transparentize($color-blue-dark, 0.9);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: transparentize($color-blue-dark, 0.8);
+  }
+}
+

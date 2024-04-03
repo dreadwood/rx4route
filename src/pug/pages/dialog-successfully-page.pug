@@ -1,0 +1,16 @@
+extends ../elements/layout-dialog
+include ../elements/images
+
+block data
+  -
+    title = "Rx4Route: dialog successfully"
+
+
+block content
+  .dialog-msg
+    .dialog-msg__img
+      +svg({ name: "icon-pop", width: 336, height: 216 })
+    .dialog-msg__title Subscription successfully activated
+    | Welcome aboard! Your RouteRx subscription is now live, and you're all set to streamline your deliveries. Dive in and discover the convenience!
+    .dialog-msg__btn
+      button.btn Start Using the Service

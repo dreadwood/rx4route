@@ -1,0 +1,7 @@
+mixin ca-field-select({ placeholder, options })
+  .ca-field-select
+    .ca-field-select__icon
+      +svg({ name: "icon-arrow-select", width: 28, height: 23 })
+    select(placeholder=placeholder)
+      each it in options
+        option(value=it)=it

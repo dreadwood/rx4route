@@ -1,0 +1,92 @@
+.dialog-actv {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 130%;
+  background-color: $color-white;
+  border-radius: 30px;
+}
+.dialog-actv__content {
+  // display: grid;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.dialog-actv__top {
+  padding-bottom: 32px;
+  font-size: 20px;
+  line-height: 24px;
+  border-bottom: 1px solid transparentize($color-blue-dark, 0.7);
+}
+.dialog-actv__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  &:not(:first-child) {
+    margin-top: 26px;
+  }
+}
+.dialog-actv__price {
+  text-align: right;
+}
+.dialog-actv__price-item {
+  font-size: 16px;
+  line-height: 24px;
+  b {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+}
+.dialog-actv__price-extra {
+  font-size: 14px;
+  line-height: 21px;
+}
+.dialog-actv__center {
+  margin-top: 30px;
+}
+.dialog-actv__bottom {
+  margin-top: auto;
+}
+.dialog-actv__form {
+  flex-shrink: 0;
+  width: 460px;
+  padding: 40px;
+  background-color: $color-gray;
+  border-radius: 30px;
+}
+.dialog-actv__form-el {
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+.dialog-actv__form-el-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  column-gap: 4px;
+  margin-top: 12px;
+  padding-right: 9px;
+  input {
+    margin-left: 9px;
+  }
+}
+.dialog-actv__form-submit {
+  margin-top: 24px;
+}
+.dialog-actv__form-note {
+  @include transition(color);
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 130%;
+  color: transparentize($color-black, 0.4);
+  a {
+    color: inherit;
+  }
+  a:hover,
+  a:focus {
+    color: $color-blue-dark;
+  }
+}

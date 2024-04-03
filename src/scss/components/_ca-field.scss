@@ -10,6 +10,7 @@
   color: $color-text;
   border: 1px solid transparentize($color-blue-dark, 0.6);
   border-radius: 12px;
+  appearance: none;
   &::placeholder {
     color: transparentize($color-gray-067, 0.60);
   }
@@ -20,6 +21,14 @@
     width: 1px;
     height: 1px;
     opacity: 0;
+  }
+  &[type="number"]::-webkit-outer-spin-button, // webkit
+  &[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+  &[type="number"] { // firefox
+    appearance: textfield;
   }
   &.error {
     color: $color-red;

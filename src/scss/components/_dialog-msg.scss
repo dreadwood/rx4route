@@ -1,0 +1,52 @@
+.dialog-msg {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 52px 75px;
+  font-family: $font-text;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: $color-gray-090;
+  background-color: $color-white;
+  border-radius: 30px;
+}
+.dialog-msg__img {
+  margin-bottom: 36px;
+}
+.dialog-msg__title {
+  margin-bottom: 16px;
+  font-size: 36px;
+  line-height: 120%;
+  font-weight: 600;
+}
+.dialog-msg__btn {
+  width: 100%;
+  max-width: 380px;
+  margin-top: 32px;
+}
+.btn {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 15px 32px;
+  font-family: $font-text;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-white;
+  text-decoration: none;
+  background-color: $color-blue-dark;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+  &[disabled] {
+    opacity: 0.6;
+  }
+}

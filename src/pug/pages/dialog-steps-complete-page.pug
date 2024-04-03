@@ -1,0 +1,11 @@
+extends ../elements/layout-dialog
+include ../elements/images
+include ../components/dialog-steps
+
+block data
+  -
+    title = "Rx4Route: dialog steps — complete"
+
+
+block content
+  +dialog-steps({ content: contentSteps, openSteps: 6 })
