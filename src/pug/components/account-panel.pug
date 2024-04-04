@@ -1,0 +1,57 @@
+mixin account-panel({})
+  -
+    const accountPanelList = [
+      {
+        icon: 'icon-panel-account',
+        text: 'Basic Information'
+      },
+      {
+        icon: 'icon-panel-star',
+        text: 'Subscription management',
+        actv: true
+      },
+      {
+        icon: 'icon-panel-settings',
+        text: 'Custom'
+      },
+      {
+        icon: 'icon-panel-bank',
+        text: 'Banking information'
+      },
+      {
+        icon: 'icon-panel-mail',
+        text: 'Email Forwarding'
+      },
+      {
+        icon: 'icon-panel-timer',
+        text: 'Business Hours'
+      },
+      {
+        icon: 'icon-panel-ring',
+        text: 'Notifications'
+      },
+      {
+        icon: 'icon-panel-shield',
+        text: 'Security'
+      },
+      {
+        icon: 'icon-panel-laptop',
+        text: 'Session Confirmation'
+      },
+      {
+        icon: 'icon-panel-key',
+        text: 'API Tokens'
+      },
+      {
+        icon: 'icon-panel-chain',
+        text: 'Orders Webhooks'
+      },
+    ]
+  aside.account-panel
+    .account-panel__title My account settings
+    ul.account-panel__list
+      each it in accountPanelList
+        li.account-panel__item
+          a.account-panel__link(href=(it.actv ? null : "#"))
+            +svg({ name: it.icon, width: 28, height: 28 })
+            =it.text

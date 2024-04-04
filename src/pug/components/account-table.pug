@@ -1,0 +1,85 @@
+mixin account-table-row({ data })
+  each row in data
+    tr
+      each it in row
+        td
+          if (typeof it ==='boolean' && it)
+            +svg({ name: "icon-mark-check", width: 16, height: 16 })
+          else if (typeof it ==='string')
+            =it
+
+mixin account-table-sale({ data })
+  .account-table__sale
+    .account-table__sale-old $200
+    .account-table__sale-new #[b $180]/month
+
+mixin account-table({ isAnnually })
+  -
+    let projectFeaturesTable = [
+      ['Unlimited roadmaps', true, true, true, true],
+      ['Feature updates', false, false, true, true],
+      ['Insight tables', true, true, true, true],
+      ['Customizable database', false, true, true, true]
+    ]
+    let collaborationTable = [
+      ['Feature voting', true, true, true, true],
+      ['Team creation', false, true, true, true],
+      ['Live chat', false, false, true, true],
+      ['Comment pane', false, true, true, true],
+      ['Meme repository', false, false, true, true],
+      ['Product voting', false, false, true, true]
+    ]
+    let analyticsTable = [
+      ['Feature tracking', true, true, true, true],
+      ['Reporting panel', false, true, true, true],
+    ]
+
+  table.account-table
+    tbody.account-table__section
+      tr.account-table__title-row
+        td Project Features
+        td StarterRx
+        td GrowthRx
+        td ScaleRx
+        td Enterprise
+      tr
+        td Drivers
+        td Up to #[b 2 Drivers]
+        td Up to #[b 10 Drivers]
+        td Over #[b 10 Drivers]
+        td Over #[b 25 Drivers]
+      +account-table-row({ data: projectFeaturesTable })
+    tbody.account-table__section
+      tr.account-table__subtitle-row
+        td(colspan="5") Collaboration
+      +account-table-row({ data: collaborationTable })
+    tbody.account-table__section
+      tr.account-table__subtitle-row
+        td(colspan="5") Analytics
+      +account-table-row({ data: analyticsTable })
+      if isAnnually
+        tr
+          td Cost
+          td #[+account-table-sale({})]
+          td #[+account-table-sale({})]
+          td #[+account-table-sale({})]
+          td #[b Contract price]
+        tr.account-table__annually-row
+          td
+          td #[b $2,160]/annually
+          td #[b $2,160]/annually
+          td #[b $2,160]/annually
+          td #[b Contract price]
+      else
+        tr
+          td Cost
+          td #[b $200/month]
+          td #[b $450/month]
+          td #[b $699/month]
+          td #[b Contract price]
+      tr.account-table__btn-row
+        td
+        td #[button.btn-account-ghost Active plan]
+        td #[button.btn-account Upgrade Now]
+        td #[button.btn-account Upgrade Now]
+        td #[button.btn-account Contact Us]

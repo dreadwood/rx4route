@@ -1,0 +1,43 @@
+.f-switch {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  font-family: $font-account;
+  font-size: 16px;
+  line-height: 21px;
+  color: transparentize($color-signal-blue, 0.4);
+  background-color: $color-periwinkle-crayola;
+  border: 0;
+  border-radius: 60px;
+  box-shadow: 0 0 0 1px transparentize($color-cornflower-blue, 0.7) inset;
+  input:checked + .f-switch__value {
+    font-weight: 700;
+    color: $color-white;
+    background-color: $color-cornflower-blue;
+  }
+}
+.f-switch__value {
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  cursor: pointer;
+  &--first {
+    padding: 14px 35px 15px 35px;
+  }
+  &--second {
+    padding: 13px 13px 13px 19px;
+  }
+}
+.f-switch__label {
+  flex-shrink: 0;
+  width: max-content;
+  max-height: 24px;
+  margin-left: 8px;
+  padding: 0 8px;
+  line-height: 24px;
+  color: $color-white;
+  background-color: $color-yellow-green;
+  border-radius: 12px;
+}

@@ -1,4 +1,4 @@
-.ca-field-tel {
+.f-field-tel {
   position: relative;
   width: 100%;
   font-family: $font-text;
@@ -26,7 +26,7 @@
     }
   }
 }
-.ca-field-tel__flag {
+.f-field-tel__flag {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -37,13 +37,12 @@
     height: 26px;
   }
 }
-.ca-field-tel__code {
+.f-field-tel__code {
   position: absolute;
   top: 50%;
   top: 0;
   left: 68px;
   left: 0;
   padding: 20px 20px 20px 68px;
-  // transform: translateY(-50%);
 }
 

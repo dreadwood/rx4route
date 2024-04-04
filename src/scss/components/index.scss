@@ -1,17 +1,30 @@
 // page
-@import "ca-page";
-@import "dialog-page";
+@import "pages/account-page";
+@import "pages/ca-page";
+@import "pages/dialog-page";
+
+// form
+@import "form/f-field-pass";
+@import "form/f-field-select";
+@import "form/f-field-tel";
+@import "form/f-field-verify";
+@import "form/f-field";
+@import "form/f-switch";
+@import "form/f-search";
+
+// button
+@import "button/btn-account-ghost";
+@import "button/btn-account";
+@import "button/btn-header";
+@import "button/btn-registration";
 
 //
-@import "ca-btn";
+@import "account-msg";
+@import "account-panel";
+@import "account-table";
 @import "ca-content";
 @import "ca-error";
 @import "ca-form";
-@import "ca-field-pass";
-@import "ca-field-select";
-@import "ca-field-tel";
-@import "ca-field-verify";
-@import "ca-field";
 @import "ca-oauth";
 @import "dialog-actv";
 @import "dialog-msg";

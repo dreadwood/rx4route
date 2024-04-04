@@ -1,0 +1,32 @@
+include ../elements/head
+include ../components/account-panel
+include ../components/f-search
+
+-
+  let title = ""
+
+block data
+
+doctype html
+html(lang="en")
+  +head({title})
+  body
+    section.account-page
+      .account-page__left
+        a.account-page__logo(href="#")
+          +svg({ name: "icon-logo-rx4route-color", width: 165, height: 30 })
+      .account-page__right
+        .account-page__header
+          h1.account-page__header-title MY ACCOUNT
+          form(action="#" role="search")
+            +f-search({})
+          button.btn-header
+            | View instructions
+            +svg({ name: "icon-question-circle", width: 24, height: 24 })
+          .account-page__header-logo
+            img(src="/img/placeholder-photo.jpg" width="40" height="40" alt="")
+        .account-page__container
+          .account-page__panel
+            +account-panel({})
+          block content
+    include ../elements/script

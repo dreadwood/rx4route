@@ -1,0 +1,78 @@
+.account-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: $container-max;
+  min-width: 1660px;
+  margin: 0 auto;
+  background-color: $color-white;
+}
+.account-page__left {
+  flex-shrink: 0;
+  width: 240px;
+  border-right: 1px solid $color-very-pale-blue;
+}
+.account-page__logo {
+  display: block;
+  width: max-content;
+  margin: 26px auto 0 auto;
+}
+.account-page__right {
+  width: 100%;
+  font-family: $font-account;
+}
+.account-page__header {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  min-height: 80px;
+  padding: 20px 15px;
+  border-bottom: 1px solid $color-very-pale-blue;
+}
+.account-page__header-title {
+  margin: 0;
+  margin-right: auto;
+  font-size: 22px;
+  line-height: 130%;
+}
+.account-page__header-logo {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.account-page__container {
+  display: flex;
+  align-items: flex-start;
+  height: calc(100% - 78px);
+  padding: 16px;
+}
+.account-page__panel {
+  flex-shrink: 0;
+  margin-right: 27px;
+}
+.account-page__content {
+  width: 100%;
+  height: 100%;
+}
+.account-page__content-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.account-page__switch {
+  width: max-content;
+  margin: 0 auto 24px auto;
+}
+.account-page__msg {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}

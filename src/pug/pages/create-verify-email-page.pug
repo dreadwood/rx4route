@@ -1,7 +1,7 @@
 extends ../elements/layout-create-account
 include ../elements/images
 include ../components/btn-back
-include ../components/ca-field-verify
+include ../components/f-field-verify
 
 block data
   -
@@ -16,6 +16,6 @@ block content
     .ca-content__subtitle We’ve sent a 6-character verification code to youremail@mail.com. The code expires soon.
     form.ca-form
       .ca-form__verify
-        +ca-field-verify({error: true})
+        +f-field-verify({error: true})
       .ca-form__note.error Code is incorrect
       button.ca-form__link(type="button") Resend verification email

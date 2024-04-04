@@ -1,7 +1,7 @@
 extends ../elements/layout-dialog
 include ../elements/images
-include ../components/ca-field-select
-include ../components/ca-field
+include ../components/f-field-select
+include ../components/f-field
 
 block data
   -
@@ -30,15 +30,15 @@ block content
         | Manage or cancel your plan anytime in your profile.
     .dialog-actv__form
       .dialog-actv__form-el
-        +ca-field({ placeholder: "Receipt Email Address", type: "email" })
+        +f-field({ placeholder: "Receipt Email Address", type: "email" })
       .dialog-actv__form-el
-        +ca-field({ placeholder: "Name on the card" })
+        +f-field({ placeholder: "Name on the card" })
       .dialog-actv__form-el
-        +ca-field({ placeholder: "Card number" })
+        +f-field({ placeholder: "Card number" })
       .dialog-actv__form-el-cols
-        +ca-field-select({ placeholder: "MM", options: monthOptions })
-        +ca-field-select({ placeholder: "YY", options: yearOptions })
-        input.ca-field(type="number" placeholder="CVV")
+        +f-field-select({ placeholder: "MM", options: monthOptions })
+        +f-field-select({ placeholder: "YY", options: yearOptions })
+        input.f-field(type="number" placeholder="CVV")
       .dialog-actv__form-submit
         .btn Link card
       .dialog-actv__form-note By clicking “Link card”, you agree to #[a(href="#") the Terms & Conditions].

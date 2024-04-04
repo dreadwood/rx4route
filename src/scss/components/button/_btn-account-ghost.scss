@@ -1,0 +1,20 @@
+.btn-account-ghost {
+  @include transition(background-color);
+  width: 100%;
+  max-width: 170px;
+  margin: 0;
+  padding: 9px 29px;
+  font-family: $font-account;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-gray-090;
+  background-color: transparent;
+  border: 1px solid transparentize($color-black, 0.9);
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: transparentize($color-cornflower-blue, 0.8)
+  }
+}

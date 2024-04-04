@@ -1,0 +1,16 @@
+extends ../elements/layout-account
+include ../elements/images
+include ../components/account-table
+include ../components/f-switch
+
+block data
+  -
+    title = "Rx4Route: account — message"
+
+block content
+  .account-page__content
+    .account-page__msg
+      .account-msg
+        h2.account-msg__title YOU HAVE SUCCESSFULLY #[br] CHANGED YOUR TARIFF
+        | You switched your plan to ScaleRx, now even more options are available to you. Enjoy your work!
+        button.account-msg__btn.btn-account Start using

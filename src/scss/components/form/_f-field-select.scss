@@ -1,4 +1,4 @@
-.ca-field-select {
+.f-field-select {
   position: relative;
   select {
     @include transition(color, border-color);
@@ -23,7 +23,7 @@
     outline: none;
   }
 }
-.ca-field-select__icon {
+.f-field-select__icon {
   position: absolute;
   top: 50%;
   right: 19px;

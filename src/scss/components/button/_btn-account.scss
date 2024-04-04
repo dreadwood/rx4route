@@ -1,0 +1,21 @@
+.btn-account {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  margin: 0;
+  padding: 10px 30px;
+  font-family: $font-account;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $color-white;
+  background-color: $color-cornflower-blue;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: color.adjust($color-cornflower-blue, $blackness: 10%);
+  }
+}

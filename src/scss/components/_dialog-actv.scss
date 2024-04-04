@@ -9,7 +9,6 @@
   border-radius: 30px;
 }
 .dialog-actv__content {
-  // display: grid;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -54,7 +53,7 @@
   flex-shrink: 0;
   width: 460px;
   padding: 40px;
-  background-color: $color-gray;
+  background-color: $color-periwinkle-crayola;
   border-radius: 30px;
 }
 .dialog-actv__form-el {

@@ -1,0 +1,69 @@
+.account-table {
+  width: 100%;
+  max-width: 1256px;
+  font-family: $font-account;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  border-collapse: collapse;
+  th:first-child,
+  td:first-child {
+    text-align: left;
+  }
+  td {
+    padding: 12px 28px 14px 28px;
+  }
+
+}
+.account-table__section {
+  tr {
+    &:nth-child(2n) {
+      background-color: $color-periwinkle-crayola;
+    }
+  }
+}
+.account-table__title-row {
+  td {
+    padding: 9px 0 17px 0;
+    font-weight: 700;
+  }
+}
+.account-table__subtitle-row {
+  td {
+    padding: 48px 0 17px 0;
+    font-weight: 700;
+  }
+  background-color: $color-white;
+}
+.account-table__annually-row {
+  td {
+    color: transparentize($color-gray-090, 0.4);
+    &:last-child {
+      color: inherit;
+    }
+  }
+}
+.account-table__btn-row {
+  td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+.account-table__sale {
+  font-size: 18px;
+  line-height: 23px;
+  color: transparentize($color-gray-090, 0.4);
+}
+.account-table__sale-old {
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: line-through
+}
+.account-table__sale-new {
+  b {
+    font-size: 22px;
+    line-height: 29px;
+    font-weight: 700;
+    color: $color-yellow-green;
+  }
+}
