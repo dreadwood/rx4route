@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Rx4Route: create account — verify email</title>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <section class="ca-page">
+      <div class="ca-page__container">
+        <div class="ca-page__left"><a class="ca-page__logo" href="#">
+            <svg width="275" height="50">
+              <use xlink:href="img/sprite.svg#icon-logo-rx4route"></use>
+            </svg></a>
+          <h1 class="ca-page__title">Create <br> Account</h1><span>Step 1 of 2</span>
+        </div>
+        <div class="ca-page__right">
+          <div class="ca-content ca-content--form">
+            <button class="ca-content__btn-back" type="button">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-arrow-btn-left"></use>
+              </svg>Back
+            </button>
+            <div class="ca-content__title">Verify Your Email</div>
+            <div class="ca-content__subtitle">We’ve sent a 6-character verification code to youremail@mail.com. The code expires soon.</div>
+            <form class="ca-form">
+              <div class="ca-form__verify">
+                <fieldset class="f-field-verify error">
+                  <input type="number" value="5"/>
+                  <input type="number" value="9"/>
+                  <input type="number" value="0"/>-
+                  <input type="number" value="3"/>
+                  <input type="number" value="1"/>
+                  <input type="number" value="6"/>
+                </fieldset>
+              </div>
+              <div class="ca-form__note error">Code is incorrect</div>
+              <button class="ca-form__link" type="button">Resend verification email</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

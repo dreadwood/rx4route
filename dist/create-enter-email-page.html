@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Rx4Route: create account — enter email</title>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <section class="ca-page">
+      <div class="ca-page__container">
+        <div class="ca-page__left"><a class="ca-page__logo" href="#">
+            <svg width="275" height="50">
+              <use xlink:href="img/sprite.svg#icon-logo-rx4route"></use>
+            </svg></a>
+          <h1 class="ca-page__title">Create <br> Account</h1><span>Step 1 of 2</span>
+        </div>
+        <div class="ca-page__right">
+          <div class="ca-content ca-content--form">
+            <div class="ca-content__title">Create Account</div>
+            <form class="ca-form">
+              <div class="ca-form__row">
+                <input class="f-field" type="text" placeholder="Company Name">
+              </div>
+              <div class="ca-form__row">
+                <div class="ca-form__cols">
+                  <input class="f-field error" type="text" placeholder="First Name">
+                  <input class="f-field" type="text" placeholder="Last Name">
+                </div>
+                <div class="ca-error">Enter a First Name</div>
+              </div>
+              <div class="ca-form__row erorr">
+                <input class="f-field error" type="email" placeholder="Email">
+                <div class="ca-error">Email is incorrect</div>
+              </div>
+              <div class="ca-form__row">
+                <fieldset class="f-field-pass">
+                  <input class="f-field" type="password" placeholder="Password"/>
+                  <input class="f-field" type="password" placeholder="Confirm"/>
+                  <button class="f-field-pass__visible" type="button" onclick="this.classList.toggle('show'); this.blur();" aria-label="show password">
+                    <svg width="32" height="32">
+                      <use xlink:href="img/sprite.svg#icon-pass-hide"></use>
+                    </svg>
+                    <svg width="32" height="32">
+                      <use xlink:href="img/sprite.svg#icon-pass-show"></use>
+                    </svg>
+                  </button>
+                </fieldset>
+              </div>
+              <div class="ca-form__row">
+                <div class="ca-form__note error">Use 8 or more characters with a mix of letters, numbers & symbols</div>
+              </div>
+              <div class="ca-form__submit">
+                <button class="btn-registration" type="submit" disabled>Continue</button>
+              </div>
+              <div class="ca-content__note">By creating an account you accept our <a href="#">Terms of Service</a></div>
+            </form>
+            <div class="ca-content__link-bottom">Already have an account? <a href="#">Sign in</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
