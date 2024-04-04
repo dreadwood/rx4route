@@ -1,0 +1,10 @@
+include ../components/f-radio-card
+
+mixin card-payment({})
+  .card-payment
+    h3.card-payment__title Payment method
+    | Easily update your billing details for your subscription.
+    .card-payment__card-list
+      +f-radio-card({ id: "card-item-1" })
+      +f-radio-card({ id: "card-item-2", isChecked: true})
+    button.btn-account-small Edit Payment Information

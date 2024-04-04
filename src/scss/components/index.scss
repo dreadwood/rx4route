@@ -9,11 +9,13 @@
 @import "form/f-field-tel";
 @import "form/f-field-verify";
 @import "form/f-field";
+@import "form/f-radio-card";
 @import "form/f-switch";
 @import "form/f-search";
 
 // button
 @import "button/btn-account-ghost";
+@import "button/btn-account-small";
 @import "button/btn-account";
 @import "button/btn-header";
 @import "button/btn-registration";
@@ -26,7 +28,12 @@
 @import "ca-error";
 @import "ca-form";
 @import "ca-oauth";
+@import "card-payment";
+@import "card-subscription";
 @import "dialog-actv";
 @import "dialog-msg";
 @import "dialog-steps";
-@import "wrp";
+@import "label-status";
+@import "label-info";
+
+// @import "wrp";

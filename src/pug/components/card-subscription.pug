@@ -1,0 +1,39 @@
+include ../components/label-info
+include ../components/label-status
+
+mixin card-subscription-option({ text })
+  li
+    +svg({ name: "icon-list-check", width: 20, height: 20 })
+    =text
+
+mixin card-subscription({ isTrial })
+  .card-subscription
+    .card-subscription__top
+      h3.card-subscription__title GrowthRx
+      +label-status({ color: (isTrial ? "purple" : null), text: (isTrial ? "Trial Period" : "Active") })
+      .card-subscription__price #[b $450]/month
+    if isTrial
+      | Trial period is connected for 30 days. #[br] Next bill #[b 04.30.2024].
+    else
+      | Subscription active for 30 days. #[br] Active till #[b 30.04.2024].
+    .card-subscription__info
+      +label-info({ icon: "icon-label-calc", text: "10 days left" })
+      +label-info({ icon: "icon-label-delivery", text: "Deliveries: 2/100" })
+    if isTrial
+      button.card-subscription__btn-dropdown
+        | See plan details
+        +svg({ name: "icon-arrow-link-down", width: 21, height: 21 })
+    else
+      .card-subscription__options-title Subscriptions include:
+      ul.card-subscription__options
+        +card-subscription-option({ text: "Integrated" })
+        +card-subscription-option({ text: "Visualize all stops and draw territories" })
+        +card-subscription-option({ text: "Plan optimized routes" })
+        +card-subscription-option({ text: "Capture proof of delivery" })
+        +card-subscription-option({ text: "Send 3 SMS per delivery - Sheduled, Out for Delivery, Delivered" })
+        +card-subscription-option({ text: "Patient tracking portal" })
+        +card-subscription-option({ text: "Copay management" })
+        +card-subscription-option({ text: "Your pharmacy brand tracking portal" })
+        +card-subscription-option({ text: "Premium training and Onboarding scheduled" })
+    .card-subscription__btn
+      a(href="#").btn-account-small Upgrade plan

@@ -1,0 +1,85 @@
+
+.card-subscription {
+  padding: 20px;
+  font-family: $font-account;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+  color: $color-gray-090;
+  background-color: $color-white;
+  border: 1px solid transparentize($color-cornflower-blue, 0.7);
+  border-radius: 20px;
+}
+.card-subscription__top {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 24px;
+}
+.card-subscription__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 26px;
+
+}
+.card-subscription__price {
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.01%;
+  b {
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 700;
+  }
+}
+.card-subscription__info {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 16px;
+}
+.card-subscription__options-title {
+  margin-top: 29px;
+  font-weight: 700;
+}
+.card-subscription__options {
+  @include list-reset;
+  margin-top: 17px;
+  margin-bottom: 23px;
+  line-height: 24px;
+  li {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    svg {
+      display: block;
+      flex-shrink: 0;
+    }
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}
+.card-subscription__btn {
+  width: max-content;
+  margin-left: auto;
+}
+.card-subscription__btn-dropdown {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding: 0;
+  font: inherit;
+  color: $color-cornflower-blue;
+  background-color: transparent;
+  border: none;
+  svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+  }
+}

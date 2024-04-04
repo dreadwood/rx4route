@@ -1,0 +1,25 @@
+.label-status {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 8px 16px;
+  font-family: $font-account;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $color-dark-pastel-green;
+  background-color: transparentize($color-dark-pastel-green, 0.8);
+  border-radius: 30px;
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: currentcolor;
+    border-radius: 50%;
+  }
+  &--purple {
+    color: $color-moderate-slate-blue;
+    background-color: transparentize($color-moderate-slate-blue, 0.8);
+  }
+}

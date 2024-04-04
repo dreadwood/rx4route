@@ -1,0 +1,17 @@
+.label-info {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  max-width: max-content;
+  padding: 7px 15px;
+  font-family: $font-account;
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-gray-090;
+  border: 1px solid transparentize($color-gray-090, 0.9);
+  border-radius: 30px;
+  svg {
+    display: block;
+    flex-shrink: 0;
+  }
+}

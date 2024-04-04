@@ -1,0 +1,22 @@
+.btn-account-small {
+  @include transition(background-color);
+  display: block;
+  width: 100%;
+  max-width: max-content;
+  margin: 0;
+  padding: 7px 29px;
+  font-family: $font-account;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $color-cornflower-blue;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid $color-cornflower-blue;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: transparentize($color-cornflower-blue, 0.9)
+  }
+}

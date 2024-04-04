@@ -1,0 +1,13 @@
+mixin f-radio-card({ id, isChecked })
+  .f-radio-card
+    input.visually-hidden(type="radio" id=id name="card" value="****1234" checked=(isChecked ? true : null))
+    label.f-radio-card__label(for=id)
+      .f-radio-card__icon-off
+        +svg({ name: "icon-radio-off", width: 24, height: 24 })
+      .f-radio-card__icon-on
+        +svg({ name: "icon-radio-on", width: 24, height: 24 })
+      .f-radio-card__logo
+        +svg({ name: "icon-logo-visa", width: 72, height: 48 })
+      .f-radio-card__value
+        b Visa ****1234
+        .f-radio-card__date 06/2026

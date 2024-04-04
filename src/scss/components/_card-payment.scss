@@ -1,0 +1,25 @@
+.card-payment {
+  padding: 26px 20px 20px 20px;
+  font-family: $font-account;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+  color: $color-gray-090;
+  background-color: $color-white;
+  border: 1px solid transparentize($color-cornflower-blue, 0.7);
+  border-radius: 20px;
+}
+.card-payment__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.card-payment__card-list {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  & > *:not(:first-child) {
+    margin-top: 16px;
+  }
+}

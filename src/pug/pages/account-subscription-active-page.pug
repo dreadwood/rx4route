@@ -1,0 +1,17 @@
+extends ../elements/layout-account
+include ../elements/images
+include ../components/card-subscription
+include ../components/card-payment
+
+
+
+block data
+  -
+    title = "Rx4Route: account — subscription trial"
+
+block content
+  .account-page__content
+    h2.account-page__content-title Subscription management
+    .account-page__subscription
+      +card-subscription({})
+      +card-payment({})
