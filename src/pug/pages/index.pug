@@ -33,6 +33,11 @@ block data
       { name: "Account: subscription active", url: "account-subscription-active-page.html" },
     ]
 
+    let authorizationPages = [
+      { name: "Authorization: sing in", url: "auth-singin-page.html" },
+      { name: "Authorization: resset password", url: "auth-reset-pass-page.html" },
+    ]
+
 
 block content
   mixin page-list({list})
@@ -79,6 +84,7 @@ block content
   h1=title
 
   h2 Pages
-  +page-list({list: createPages})
-  +page-list({list: dialogPages})
-  +page-list({list: accountPages})
+  +page-list({ list: createPages })
+  +page-list({ list: dialogPages })
+  +page-list({ list: accountPages })
+  +page-list({ list: authorizationPages })

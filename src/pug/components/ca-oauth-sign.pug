@@ -1,0 +1,7 @@
+mixin ca-oauth-sign({ })
+  .ca-oauth-sign
+    | Or sign in with
+    .ca-oauth-sign__list
+      each it in oAuthProvides
+        button.ca-oauth-sign__btn(aria-label=`sing in with ${it.name}`)
+          +svg({ name: it.icon, height: 40 })

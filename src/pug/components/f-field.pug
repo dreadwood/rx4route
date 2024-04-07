@@ -1,2 +1,2 @@
-mixin f-field({ placeholder, type })
-  input.f-field(type=(type || 'text') placeholder=placeholder)
+mixin f-field({ placeholder, type, isError })
+  input.f-field(class=(isError ? "error" : null) type=(type || "text") placeholder=placeholder)

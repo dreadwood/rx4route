@@ -1,0 +1,41 @@
+extends ../elements/layout-create-account
+include ../elements/images
+include ../components/f-field-pass-single
+include ../components/f-checkbox
+include ../components/ca-oauth-sign
+
+block data
+  -
+    title = "Rx4Route: authorization — sing in"
+    name = "Sign in"
+    let oAuthProvides = [
+      { name: "Google", icon: "icon-logo-google" },
+      { name: "Microsoft", icon: "icon-logo-microsoft" },
+      { name: "Apple", icon: "icon-logo-apple" },
+      { name: "Github", icon: "icon-logo-github" }
+    ]
+
+
+block content
+  .ca-content
+    .ca-content__title Sign in
+
+    .ca-content__form
+      form.ca-form.ca-form--sing
+        .ca-form__row.erorr
+          +f-field({ type: "email", placeholder: "Email", isError: true })
+          .ca-error Email is incorrect
+        .ca-form__row
+          +f-field-pass-single({ isError: true })
+          .ca-error Password is incorrect
+        .ca-form__row
+          .ca-form__options
+            +f-checkbox({ text: "Remember me", id: "remember", isChecked: true })
+            a.f-link(href="#") Forgot Password?
+        .ca-form__submit
+          button.btn-registration(type="submit" disabled) Sign in
+
+    .ca-content__ca-oauth-sign
+      +ca-oauth-sign({})
+
+    .ca-content__link-bottom Don’t have an account? #[a(href="#") Create an accout ]

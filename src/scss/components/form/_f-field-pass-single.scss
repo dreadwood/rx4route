@@ -1,0 +1,39 @@
+.f-field-pass-single {
+  position: relative;
+  input {
+    padding-right: 60px;
+  }
+}
+.f-field-pass-single__visible {
+  @include transition(color);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  color: $color-blue-dark;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  svg {
+    fill: currentcolor;
+  }
+  &:hover,
+  &:focus {
+    color: color.adjust($color-blue-dark, $lightness: 20%);
+  }
+  svg:last-child {
+    display: none;
+  }
+  &.show {
+    svg:first-child {
+      display: none;
+    }
+    svg:last-child {
+      display: block;
+    }
+  }
+}

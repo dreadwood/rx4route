@@ -1,0 +1,9 @@
+mixin f-checkbox({ id, isChecked, text, isAnnually })
+  .f-checkbox
+    input.visually-hidden(type="checkbox" id=id checked=isChecked)
+    label.f-checkbox__label(for=id)
+      .f-checkbox__icon-off
+        +svg({ name: "icon-checkbox-off", width: 24, height: 24 })
+      .f-checkbox__icon-on
+        +svg({ name: "icon-checkbox-on", width: 24, height: 24 })
+      .f-checkbox__text=text

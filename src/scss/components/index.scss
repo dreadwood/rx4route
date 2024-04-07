@@ -4,11 +4,14 @@
 @import "pages/dialog-page";
 
 // form
+@import "form/f-checkbox";
+@import "form/f-field-pass-single";
 @import "form/f-field-pass";
 @import "form/f-field-select";
 @import "form/f-field-tel";
 @import "form/f-field-verify";
 @import "form/f-field";
+@import "form/f-link";
 @import "form/f-radio-card";
 @import "form/f-switch";
 @import "form/f-search";
@@ -27,6 +30,7 @@
 @import "ca-content";
 @import "ca-error";
 @import "ca-form";
+@import "ca-oauth-sign";
 @import "ca-oauth";
 @import "card-payment";
 @import "card-subscription";

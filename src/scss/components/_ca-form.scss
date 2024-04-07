@@ -7,6 +7,9 @@
   font-weight: 400;
   text-align: left;
   color: transparentize($color-gray-067, 0.60);
+  &--sing {
+    margin-bottom: 48px;
+  }
 }
 .ca-form__row {
   .ca-error {
@@ -54,4 +57,9 @@
   &:focus {
     color: color.adjust($color-blue-dark, $lightness: 20%);
   }
+}
+.ca-form__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,0 +1,9 @@
+include ../elements/images
+include ../components/f-field
+
+mixin f-field-pass-single({ isError })
+  .f-field-pass-single
+    +f-field({ type: "password", placeholder: "Password", isError: true })
+    button.f-field-pass-single__visible(type="button" onclick="this.classList.toggle('show'); this.blur();" aria-label="show password")
+      +svg({ name: "icon-pass-hide", width: 32, height: 32 })
+      +svg({ name: "icon-pass-show", width: 32, height: 32 })

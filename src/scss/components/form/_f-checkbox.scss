@@ -1,0 +1,32 @@
+.f-checkbox {
+  input:checked + .f-checkbox__label .f-checkbox__icon-on {
+    display: block;
+  }
+  input:not(:checked) + .f-checkbox__label .f-checkbox__icon-off {
+    display: block;
+  }
+}
+.f-checkbox__label {
+  @include transition(color);
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-067;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $color-blue-dark;
+  }
+}
+.f-checkbox__icon-on,
+.f-checkbox__icon-off {
+  display: none;
+  svg {
+    display: block;
+  }
+}
