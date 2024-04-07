@@ -1,0 +1,11 @@
+.f-info-label {
+  padding: 10px 18px;
+  font-family: $font-text;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-gray-067;
+  background-color: transparentize($color-dark-pastel-green, 0.8);
+  border-radius: 20px;
+}

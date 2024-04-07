@@ -1,0 +1,24 @@
+extends ../elements/layout-create-account
+include ../elements/images
+include ../components/f-field
+
+block data
+  -
+    title = "Rx4Route: authorization — resset password"
+    name = "Password <br> & Security"
+
+block content
+  .ca-content
+    .ca-content__title Reset your password
+
+    .ca-content__form
+      form.ca-form.ca-form--sing
+        .ca-form__row
+          +f-field({ type: "email", placeholder: "Enter email", value: "youremail@yahoo.com"})
+        .ca-form__row
+          .f-info-label We have e-mailed you the reset instructions
+        .ca-form__submit
+          button.btn-registration(type="submit") Reset password
+
+
+    .ca-content__link-bottom #[a(href="#") Back to Sign in]
