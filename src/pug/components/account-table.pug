@@ -1,12 +1,15 @@
 mixin account-table-row({ data })
   each row in data
     tr
-      each it in row
+      each it, i in row
         td
           if (typeof it ==='boolean' && it)
             +svg({ name: "icon-mark-check", width: 16, height: 16 })
           else if (typeof it ==='string')
-            =it
+            if i > 0
+              b=it
+            else
+              =it
 
 mixin account-table-sale({ data })
   .account-table__sale
@@ -16,22 +19,59 @@ mixin account-table-sale({ data })
 mixin account-table({ isAnnually })
   -
     let projectFeaturesTable = [
-      ['Unlimited roadmaps', true, true, true, true],
-      ['Feature updates', false, false, true, true],
-      ['Insight tables', true, true, true, true],
-      ['Customizable database', false, true, true, true]
+      ['Integrations', true, true, true, true],
+      ['Visualize all deliveries on the map and draw the areas', true, true, true, true],
+      ['Efficient route optimization', true, true, true, true],
+      ['Capture proof of delivery', true, true, true, true],
+      ['Real-time interactive tracking', true, true, true, true],
+      ['Recipient Prescription Management Personal Portal', false, false, true, true],
+      ['Loose Prevention Barcode Scanning System', false, true, true, true],
+      ['Multiple Facilities Managment system', false, false, true, true],
+      ['Recurrent Routes Management System', false, false, true, true],
+      ['Copay Management System', false, true, true, true],
+      ['AI Route Planing', false, false, true, true],
+      ['Nested Staff Managment', false, false, true, true],
+      ['Warehouse Managment', false, false, true, true],
+      ['Quality Assurance Management', false, false, true, true],
+      ['Driver Information Management', false, false, true, true],
+      ['Tips Collection System for the Driver', false, false, true, true],
+      ['Direct Database Access', false, false, false, true],
+      ['Orders creation/tracking API', false, false, false, true],
+      ['Order Status Change Webhook', false, false, true, true],
+      ['Drivers Hiring Management System', false, false, false, true],
+    ]
+    let communicationTable = [
+      ['Anytime Recipeint Signature Request', false, false, true, true],
+      ['Call center with live operator', false, false, true, true],
+      ['Send 3 SMS per delivery - Out for delivery, Driver on the way, Delivered', true, true, true, true],
+      ['Unlimited SMS for communication with patients', false, false, true, true],
+      ['Customer Feedbacks', false, true, true, true],
+    ]
+    let brandingTable = [
+      ['Your pharmacy branding on labels and tracking', false, true, true, true],
+      ['Rx4Route branding', false, false, true, true],
+      ['Mobile Application Branding', false, false, false, true],
     ]
     let collaborationTable = [
-      ['Feature voting', true, true, true, true],
-      ['Team creation', false, true, true, true],
-      ['Live chat', false, false, true, true],
-      ['Comment pane', false, true, true, true],
-      ['Meme repository', false, false, true, true],
-      ['Product voting', false, false, true, true]
+      ['Dedicated full-time dispatchers', false, false, true, true],
+      ['Premium training and onboarding of new staff', false, false, true, false],
+      ['24/7 Premium Support', false, false, false, true],
+      ['Dedicated manager', false, false, false, true],
+      ['Dedicated Development of new features', false, false, false, true],
+      ['Phisically Isolated Server and Database', false, false, false, true],
+      ['Support IP2SEC Tunnels', false, false, false, true],
+      ['Integration with USPS, FedEx, UPS, DHL and Rx2Go', true, true, true, true],
     ]
     let analyticsTable = [
-      ['Feature tracking', true, true, true, true],
-      ['Reporting panel', false, true, true, true],
+      ['Route based delivery timeline chart', false, false, true, true],
+      ['Monthly All Deliveries E-mail reports', false, false, false, true],
+      ['Unlimted CSVExport', false, false, false, true],
+    ]
+    let pricesTable = [
+      ['Subscription cost', '$240/month', '$540/month', '$839/month', 'Contract price'],
+      ['Each Order', '$0.89', '$0.84', '$0.79', 'Contract price'],
+      ['Inbound Call Minute', '', '', '$2.12', 'Contract price'],
+      ['Outbound Call Minute', '', '', '$2.57', 'Contract price'],
     ]
 
   table.account-table
@@ -51,12 +91,24 @@ mixin account-table({ isAnnually })
       +account-table-row({ data: projectFeaturesTable })
     tbody.account-table__section
       tr.account-table__subtitle-row
+        td(colspan="5") Communication
+      +account-table-row({ data: communicationTable })
+    tbody.account-table__section
+      tr.account-table__subtitle-row
+        td(colspan="5") Branding
+      +account-table-row({ data: brandingTable })
+    tbody.account-table__section
+      tr.account-table__subtitle-row
         td(colspan="5") Collaboration
       +account-table-row({ data: collaborationTable })
     tbody.account-table__section
       tr.account-table__subtitle-row
         td(colspan="5") Analytics
       +account-table-row({ data: analyticsTable })
+    tbody.account-table__section
+      tr.account-table__subtitle-row
+        td(colspan="5") Prices
+      +account-table-row({ data: pricesTable })
       if isAnnually
         tr
           td Cost
@@ -70,16 +122,9 @@ mixin account-table({ isAnnually })
           td #[b $2,160]/annually
           td #[b $2,160]/annually
           td #[b Contract price]
-      else
-        tr
-          td Cost
-          td #[b $200/month]
-          td #[b $450/month]
-          td #[b $699/month]
-          td #[b Contract price]
       tr.account-table__btn-row
         td
-        td #[button.btn-account-ghost Active plan]
+        td #[button.btn-account Upgrade Now]
         td #[button.btn-account Upgrade Now]
         td #[button.btn-account Upgrade Now]
         td #[button.btn-account Contact Us]

@@ -1,8 +1,5 @@
 mixin f-switch({ isAnnually })
-  fieldsset.f-switch
-    input.visually-hidden(type="radio" id="plan-monthly" name="plan" checked=(isAnnually ? null : true))
-    label.f-switch__value.f-switch__value--first(for="plan-monthly") Monthly
-    input.visually-hidden(type="radio" id="plan-annually" name="plan" checked=(isAnnually ? true : null))
-    label.f-switch__value.f-switch__value--second(for="plan-annually")
-      | Annually
-      .f-switch__label -20%
+  - let onClickBtn = "document.querySelectorAll('.f-switch__btn').forEach(btn => btn.classList.remove('actv')); this.classList.add('actv')"
+  .f-switch()
+    button.f-switch__value.f-switch__btn.actv(onclick=onClickBtn) Monthly
+    button.f-switch__value.f-switch__btn(onclick=onClickBtn) Annually

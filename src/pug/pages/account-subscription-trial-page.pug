@@ -8,10 +8,11 @@ include ../components/card-payment
 block data
   -
     title = "Rx4Route: account — subscription trial"
+    isHeaderLabels = true
 
 block content
   .account-page__content
     h2.account-page__content-title Subscription management
     .account-page__subscription
       +card-subscription({ isTrial: true })
-      +card-payment({})
+      +card-payment({ isEmpty: true })

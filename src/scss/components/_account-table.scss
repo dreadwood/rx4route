@@ -8,10 +8,12 @@
   border-collapse: collapse;
   th:first-child,
   td:first-child {
+    width: 420px;
+    padding-left: 28px;
     text-align: left;
   }
   td {
-    padding: 12px 28px 14px 28px;
+    padding: 12px 20px 14px 20px;
   }
 
 }
@@ -23,14 +25,14 @@
   }
 }
 .account-table__title-row {
-  td {
+  td:first-child {
     padding: 9px 0 17px 0;
     font-weight: 700;
   }
 }
 .account-table__subtitle-row {
-  td {
-    padding: 48px 0 17px 0;
+  td:first-child {
+    padding: 24px 0 16px 0;
     font-weight: 700;
   }
   background-color: $color-white;
@@ -45,8 +47,9 @@
 }
 .account-table__btn-row {
   td {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: $color-white;
   }
 }
 .account-table__sale {
