@@ -17,18 +17,20 @@ block data
     let dialogPages = [
       { name: "Dialog activate", url: "dialog-activate-page.html" },
       { name: "Dialog successfully", url: "dialog-successfully-page.html" },
-      { name: "Dialog steps: order", url: "dialog-steps-order-page.html" },
-      { name: "Dialog steps: route", url: "dialog-steps-route-page.html" },
-      { name: "Dialog steps: account", url: "dialog-steps-account-page.html" },
-      { name: "Dialog steps: driver", url: "dialog-steps-driver-page.html" },
-      { name: "Dialog steps: app", url: "dialog-steps-app-page.html" },
-      { name: "Dialog steps: complete", url: "dialog-steps-complete-page.html" },
+      { name: "Dialog trial period <b>(new)</b>", url: "dialog-trial-period-page.html" },
+      { name: "Dialog steps: order <b>(update)</b>", url: "dialog-steps-order-page.html" },
+      { name: "Dialog steps: route <b>(update)</b>", url: "dialog-steps-route-page.html" },
+      { name: "Dialog steps: account <b>(update)</b>", url: "dialog-steps-account-page.html" },
+      { name: "Dialog steps: driver <b>(update)</b>", url: "dialog-steps-driver-page.html" },
+      { name: "Dialog steps: app <b>(update)</b>", url: "dialog-steps-app-page.html" },
+      { name: "Dialog steps: complete <b>(update)</b>", url: "dialog-steps-complete-page.html" },
     ]
 
     let accountPages = [
       { name: "Account: plan month", url: "account-plan-month-page.html" },
       { name: "Account: plan year", url: "account-plan-year-page.html" },
       { name: "Account: message", url: "account-message-page.html" },
+      { name: "Account: message activated <b>(new)</b>", url: "account-message-activated-page.html" },
       { name: "Account: subscription trial", url: "account-subscription-trial-page.html" },
       { name: "Account: subscription active", url: "account-subscription-active-page.html" },
     ]
@@ -44,7 +46,7 @@ block content
     ul
       each it in list
         li
-          a(href=it.url) #{it.url} ---- #{it.name}
+          a(href=it.url) #{it.url} ---- !{it.name}
   style.
     body {
       --color-main: #4682b4;

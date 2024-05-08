@@ -1,0 +1,79 @@
+.dialog-trial {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  padding: 23px 77px 45px 77px;
+  font-family: $font-text;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: $color-blue-dark;
+  background-color: $color-white;
+  border-radius: 40px;
+}
+.dialog-trial__btn-close {
+  @include transition(background-color);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  background-color: transparentize($color-blue-dark, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: transparentize($color-blue-dark, 0.8);
+  }
+  svg {
+    display: block;
+  }
+}
+.dialog-trial__img {
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  img {
+    display: block;
+  }
+}
+.dialog-trial__title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 110%;
+  font-weight: 600;
+}
+.dialog-trial__text {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+.dialog-trial__form {
+  margin-top: 16px;
+}
+.dialog-trial__form-el {
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+.dialog-actv__form-submit {
+  margin-top: 24px;
+}
+.dialog-trial__note {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: transparentize($color-blue-dark, 0.4);
+  a {
+    @include transition(color);
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      color: $color-blue-dark;
+    }
+  }
+}

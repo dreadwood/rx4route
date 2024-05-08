@@ -1,0 +1,18 @@
+extends ../elements/layout-account
+include ../elements/images
+include ../components/account-table
+include ../components/f-switch
+
+block data
+  -
+    title = "Rx4Route: account — message activated"
+
+block content
+  .account-page__content
+    .account-page__msg.account-page__msg--img
+      .account-msg
+        .account-msg__img
+          +svg({ name: "icon-pop", width: 157, height: 100 })
+        h2.account-msg__title Plan Activated Successfully
+        | You have successfully activated the GrowthRx plan. Start making the most of your work!
+        button.account-msg__btn.btn-account Get Started

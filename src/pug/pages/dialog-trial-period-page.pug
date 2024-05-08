@@ -1,0 +1,31 @@
+extends ../elements/layout-dialog-site
+include ../elements/images
+
+block data
+  -
+    title = "Rx4Route: dialog trial period"
+
+
+block content
+  .dialog-trial
+    button.dialog-trial__btn-close
+      +svg({ name: "icon-cross-modal", width: 16, height: 16 })
+    .dialog-trial__img
+      +picture({image: `/img/gift-box@1x@1x.png`, width: 269, height: 191})
+    .dialog-trial__title Trial period
+    p.dialog-trial__text Enjoy a 14-day free trial of Rx4Route with up to 50 deliveries, whichever comes first. No charges apply during the trial period.
+    form.dialog-trial__form
+      .dialog-trial__form-el
+        input.f-field(type="text" placeholder="Company Name")
+      .dialog-trial__form-el
+        input.f-field(type="email" placeholder="Email")
+      .dialog-trial__form-el
+        .f-field-tel
+          .f-field-tel__flag
+            +svg({name: "icon-flag-us", height: 26, width: 36})
+          .f-field-tel__code +1
+          input(type="tel" placeholder="965-071")
+      .dialog-actv__form-submit
+        button.btn-dialog(type="submit") Start your free trial
+
+    .dialog-trial__note By creating an account you accept our #[a(href="#") Terms of Service]

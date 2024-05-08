@@ -1,0 +1,45 @@
+include ../elements/head
+
+-
+  let title = ""
+  let contentSteps = [
+    {
+      name: "1. Create your first order",
+      text: "Begin your delivery process by placing your first order on our platform. Customize the details to fit your specific requirements, including the delivery method, time windows, necessary documentation, and more, to ensure a service that fully meets your patients' needs."
+    },
+    {
+      name: "2. Draw your driver’s route",
+      text: "Once your packages are logged into our system, you will see them visualized as stops on the map. Easily draw efficient routes, optimizing the journey for your drivers and ensuring timely deliveries."
+    },
+    {
+      name: "3. Set up your driver’s account",
+      text: "Create individual accounts for your drivers on our platform. This will allow you to assign routes to them as well as keep their documentation in one place."
+    },
+    {
+      name: "4. Assign route to your driver",
+      text: "Assign the optimized route to your driver. They will receive all the necessary information about the packages and delivery points of their route on their app allowing them up to complete deliveries hassle-free."
+    },
+    {
+      name: "5. Equip your driver with our app",
+      text: "Download the drivers’ app by scanning the QR code below. This essential tool allows them to complete deliveries, capture proof of delivery through signatures and pictures, and access all the delivery and patient information they need on the go."
+    },
+    {
+      name: "6. Complete your first delivery",
+      text: "With all the preparations complete, your driver is ready to proceed with their first delivery. Monitor their progress through a web dashboard in real time and celebrate the first of many successful deliveries as your business moves forward!"
+    },
+  ]
+
+block data
+
+doctype html
+html(lang="en")
+  +head({title})
+  body
+    section.dialog-site-page
+      .dialog-site-page__container
+        .dialog-site-page__background
+          +picture({image: `/img/placeholder-rx4go-site@1x.png`, width: 1440, height: 1027})
+        .overlay
+          .dialog-site-page__content
+            block content
+    include ../elements/script

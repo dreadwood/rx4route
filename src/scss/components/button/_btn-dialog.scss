@@ -1,11 +1,11 @@
-.btn-registration {
+.btn-dialog {
   @include transition(background-color);
   width: 100%;
   margin: 0;
-  padding: 13px 20px;
+  padding: 20px 20px 21px 20px;
   font-family: $font-text;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 19px;
   color: $color-white;
   background-color: $color-blue-dark;
   border: none;

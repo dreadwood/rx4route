@@ -2,6 +2,7 @@
 @import "pages/account-page";
 @import "pages/ca-page";
 @import "pages/dialog-page";
+@import "pages/dialog-site-page";
 
 // form
 @import "form/f-checkbox";
@@ -21,6 +22,7 @@
 @import "button/btn-account-ghost";
 @import "button/btn-account-small";
 @import "button/btn-account";
+@import "button/btn-dialog";
 @import "button/btn-header";
 @import "button/btn-registration";
 
@@ -38,6 +40,7 @@
 @import "dialog-actv";
 @import "dialog-msg";
 @import "dialog-steps";
+@import "dialog-trial";
 @import "label-status";
 @import "label-info";
 
