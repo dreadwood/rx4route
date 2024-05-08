@@ -6,6 +6,7 @@ include ../components/label-header
 -
   let title = ""
   let isHeaderLabels = false
+  let isHeaderLabelsError = false
 
 block data
 
@@ -23,7 +24,7 @@ html(lang="en")
           if isHeaderLabels
             .account-page__header-labels
               +label-header({ icon: "icon-label-calc", text: "3 days left of 14" })
-              +label-header({ icon: "icon-label-delivery", text: "20 deliveries out of 50 left" })
+              +label-header({ icon: "icon-label-delivery", text: "20 deliveries out of 50 left", isError: isHeaderLabelsError })
           form.account-page__search(action="#" role="search")
             +f-search({})
           button.btn-header

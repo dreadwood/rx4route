@@ -1,5 +1,5 @@
-mixin label-header({ icon, text })
-  .label-header
+mixin label-header({ icon, text, isError })
+  .label-header(class=(isError ? "error" : ""))
     .label-header__icon
       +svg({ name: icon, width: 18, height: 18 })
-    .label-header__text=text
+    span=text

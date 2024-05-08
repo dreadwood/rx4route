@@ -13,9 +13,13 @@
   background-color: $color-blue-alice-2;
   border: 0;
   border-radius: 12px;
-  svg {
-    display: block;
-    flex-shrink: 0;
+  &.error {
+    .label-header__icon {
+      background-color: transparentize($color-red, 0.9);
+    }
+    .label-header__icon svg {
+      fill: $color-red;
+    }
   }
 }
 .label-header__icon {
@@ -25,7 +29,9 @@
   height: 30px;
   background-color: $color-white;
   border-radius: 50%;
-}
-.label-header__text {
-
+  svg {
+    display: block;
+    flex-shrink: 0;
+    fill: $color-cornflower-blue;
+  }
 }
