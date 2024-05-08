@@ -24,7 +24,7 @@
 .account-page__header {
   display: flex;
   align-items: center;
-  column-gap: 24px;
+  column-gap: 16px;
   min-height: 80px;
   padding: 20px 15px;
   border-bottom: 1px solid $color-very-pale-blue;
@@ -35,9 +35,17 @@
   font-size: 22px;
   line-height: 130%;
 }
+.account-page__header-labels {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.account-page__search {
+  width: 240px;
+}
 .account-page__header-logo {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   overflow: hidden;
   background-color: transparentize($color-blue-light, 0.7);
   border-radius: 50%;
@@ -68,6 +76,9 @@
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
+}
+.account-page__label {
+  margin-bottom: 32px;
 }
 .account-page__switch {
   width: max-content;

@@ -40,6 +40,23 @@ block data
       { name: "Authorization: resset password", url: "auth-reset-pass-page.html" },
     ]
 
+    let orderPages = [
+      { name: "1 Pop-up", url: "dialog-trial-period-page.html" },
+      { name: "4 Sing in", url: "auth-singin-page.html" },
+      { name: "5 Sing in", url: "dialog-successfully-page.html" },
+      { name: "6.1 Steps", url: "dialog-steps-order-page.html" },
+      { name: "6.2 Steps", url: "dialog-steps-route-page.html" },
+      { name: "6.3 Steps", url: "dialog-steps-account-page.html" },
+      { name: "6.4 Steps", url: "dialog-steps-driver-page.html" },
+      { name: "6.5 Steps", url: "dialog-steps-app-page.html" },
+      { name: "6.6 Steps", url: "dialog-steps-complete-page.html" },
+      { name: "7.1 Interface trial<b>*</b>", url: "account-subscription-active-page.html" },
+      { name: "7.2 Interface trial: table", url: "account-plan-month-page.html" },
+      { name: "7.3 Interface trial: card", url: "dialog-activate-page.html" },
+      { name: "7.4 Interface trial: activate", url: "account-message-activated-page.html" },
+      { name: "8 Interface block after trial", url: "account-table-trial.html" },
+    ]
+
 
 block content
   mixin page-list({list})
@@ -85,8 +102,16 @@ block content
 
   h1=title
 
+  h2 Trial period
+  +page-list({ list: orderPages })
+
   h2 Pages
   +page-list({ list: createPages })
   +page-list({ list: dialogPages })
   +page-list({ list: accountPages })
   +page-list({ list: authorizationPages })
+
+
+
+  br
+  br

@@ -1,9 +1,11 @@
 include ../elements/head
 include ../components/account-panel
 include ../components/f-search
+include ../components/label-header
 
 -
   let title = ""
+  let isHeaderLabels = false
 
 block data
 
@@ -18,7 +20,11 @@ html(lang="en")
       .account-page__right
         .account-page__header
           h1.account-page__header-title MY ACCOUNT
-          form(action="#" role="search")
+          if isHeaderLabels
+            .account-page__header-labels
+              +label-header({ icon: "icon-label-calc", text: "3 days left of 14" })
+              +label-header({ icon: "icon-label-delivery", text: "20 deliveries out of 50 left" })
+          form.account-page__search(action="#" role="search")
             +f-search({})
           button.btn-header
             | View instructions

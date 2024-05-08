@@ -3,14 +3,14 @@
   input {
     display: block;
     width: 100%;
-    padding: 8px 40px 8px 11px;
+    padding: 14px 40px 14px 11px;
     font-family: $font-account;
     font-size: 14px;
     line-height: 18px;
     color: $color-text;
     background-color: $color-white;
     border: 1px solid $color-very-pale-blue;
-    border-radius: 20px;
+    border-radius: 30px;
     &::placeholder {
       font-family: inherit;
       font-size: inherit;

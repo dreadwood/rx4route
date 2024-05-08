@@ -1,0 +1,19 @@
+extends ../elements/layout-account
+include ../elements/images
+include ../components/account-table
+include ../components/f-switch
+include ../components/label-trial
+
+block data
+  -
+    title = "Rx4Route: account — plan month"
+    isHeaderLabels = true
+
+block content
+  .account-page__content
+    h2.account-page__content-title Subscription management
+    .account-page__label
+      +label-trial({})
+    .account-page__switch
+      +f-switch({})
+    +account-table({})

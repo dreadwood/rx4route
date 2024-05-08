@@ -1,0 +1,31 @@
+.label-header {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  max-width: max-content;
+  min-height: 48px;
+  padding: 9px 19px 9px 8px;
+  font-family: $font-account;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  color: $color-gray-090;
+  background-color: $color-blue-alice-2;
+  border: 0;
+  border-radius: 12px;
+  svg {
+    display: block;
+    flex-shrink: 0;
+  }
+}
+.label-header__icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: $color-white;
+  border-radius: 50%;
+}
+.label-header__text {
+
+}
