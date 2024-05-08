@@ -46,6 +46,7 @@
   margin-top: 24px;
   overflow: hidden;
   background-color: $color-gray-851;
+  border: 1px solid transparentize($color-blue-dark, 0.84);
   border-radius: 20px;
   aspect-ratio: 15 / 8;
   img {
